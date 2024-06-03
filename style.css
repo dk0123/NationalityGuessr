@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2b3e50; /* Dark blue-grey */
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Adjusted to control container size */
+    max-width: 960px; /* Maximum width for better control */
+}
+
+.case, .guess-section {
+    background-color: #1c2833; /* Darker blue */
+    padding: 20px;
+    width: 45%; /* Adjusted for equal splitting */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guess-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    background-color: #2e86c1; /* Bright blue */
+    color: white;
+    cursor: pointer;
+}
+
+.suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Same width as the input */
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #1c2833;
+    border: 1px solid #2e86c1;
+    border-top: none;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    position: absolute;
+    top: 60px; /* Position below the input field */
+    z-index: 1000;
+    display: none; /* Initially hidden */
+}
+
+.suggestions li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.suggestions li img {
+    margin-right: 10px;
+    width: 20px;
+    height: 15px;
+}
+
+.suggestions li:hover {
+    background-color: #2e86c1;
+}
